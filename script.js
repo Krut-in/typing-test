@@ -58,8 +58,8 @@ function updateTime() {
     clearInterval(timeInterval);
     gameWon();
   }
-  if (time <= 5) heading.style.backgroundColor = "red";
-  else heading.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+  if (time <= 5) heading.style.backgroundColor = "#EF6D6D";
+  else heading.style.backgroundColor = "#395b64";
 }
 
 function gameWon() {
@@ -75,11 +75,11 @@ function gameWon() {
 }
 
 function gameOver() {
-  endgameEl.innerHTML = `<h1>Time is up !</h1>
+  endgameEl.innerHTML = `<div id="gameOver">Time is up !</h1>
   <p>You Scored : 
   <span id="score" >${score}</span>
   </p>
-  <button onclick="location.reload()">Try Again !</button>`;
+  <button onclick="location.reload()">Try Again !</button></div>`;
   endgameEl.style.display = "flex";
   document.addEventListener("keyup", function (e) {
     if (e.key === "Enter") location.reload();
