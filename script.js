@@ -35,7 +35,7 @@ function getRandomWord() {
 
 function addToDom() {
   randomWord = getRandomWord();
-  word.innerHTML = randomWord;
+  word.innerHTML = randomWord.toLowerCase();
 }
 
 function updateScore() {
